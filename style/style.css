@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Revalia&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+:root {
+  --fontPrincipal: "Revalia", cursive, sans-serif;
+  --header-backgroundImgCard: #3c73b3;
+  --backgroundPrincipal: #383a39;
+  --backgroundForm: #d15b56;
+  --backgroundCard-navHover: #565757;
+  --fontNav: #d15b56;
+  --fontCard: #9ecde9;
+  --bordaRadius: 0.75rem;
+}
+
+body {
+  background-color: var(--backgroundPrincipal);
+  font-family: var(--fontPrincipal);
+}
+
+h1 {
+  font-size: 2.3rem;
+  color: var(--header-backgroundImgCard);
+}
+
+header {
+  background-image: url(../img/header.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header span {
+  background-color: #d88d8a;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--bordaRadius);
+}
+
+nav {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 7rem;
+}
+
+nav ul {
+  width: 58rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--fontNav);
+}
+
+nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2rem 0.5rem 0.4rem 0.3rem;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav ul li:first-child {
+  background-color: var(--backgroundCard-navHover);
+}
+
+nav ul li:nth-child(3):hover {
+  background: none;
+  cursor: default;
+}
+
+nav ul li:hover {
+  background-color: var(--backgroundCard-navHover);
+}
+
+nav ul li a {
+  color: var(--fontNav);
+}
+
+main {
+  width: 100%;
+  height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section {
+  width: 60vw;
+  height: 50rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+main section .containerCard {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section .containerCard .card {
+  background: var(--backgroundCard-navHover);
+  width: 15rem;
+  height: 20rem;
+  border-radius: var(--bordaRadius);
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  justify-items: center;
+  text-align: center;
+  color: var(--fontCard);
+}
+
+main section .containerCard .card img {
+  background-color: var(--header-backgroundImgCard);
+  padding: 0.9rem;
+  border-radius: 10rem;
+}
+
+main section .containerCard .card hr {
+  width: 80%;
+  border-color: var(--fontCard);
+}
+
+main section .containerCard .card p {
+  width: 80%;
+}
+
+main .containerImgBarbeiro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 47vw;
+  height: 13rem;
+}
+
+main .containerImgBarbeiro img {
+  max-width: 18rem;
+}
+
+@media (max-width: 1578px) {
+  .containerImgBarbeiro img {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 1323px) {
+  .containerImgBarbeiro img {
+    width: 13rem;
+  }
+}
+
+aside {
+  background: var(--backgroundForm);
+  color: var(--backgroundPrincipal);
+  width: 40vw;
+  height: 50rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+aside .containerAside {
+  width: 35vw;
+  display: -ms-grid;
+  display: grid;
+  height: 40rem;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  justify-items: center;
+}
+
+aside .containerAside .headerForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 7rem;
+  text-align: center;
+}
+
+aside .containerAside .headerForm h2 {
+  font-size: 3rem;
+}
+
+aside .containerAside .headerForm span {
+  background-color: var(--backgroundPrincipal);
+  color: var(--fontNav);
+  padding: 0 0.6rem 0.3rem;
+  border-radius: var(--bordaRadius);
+}
+
+aside .containerAside form {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  width: 30rem;
+  height: 30rem;
+}
+
+aside .containerAside form input {
+  font-family: var(--fontPrincipal);
+  background-color: #e29c99;
+  border: none;
+  height: 3rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+aside .containerAside form input::-webkit-input-placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form input:-ms-input-placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form input::-ms-input-placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form input::placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form textarea {
+  resize: none;
+  font-family: var(--fontPrincipal);
+  background-color: #e29c99;
+  height: 7rem;
+  text-align: center;
+}
+
+aside .containerAside form textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form textarea::placeholder {
+  opacity: 1;
+  color: var(--backgroundPrincipal);
+}
+/*# sourceMappingURL=style.css.map */
