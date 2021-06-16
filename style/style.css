@@ -138,6 +138,7 @@ a {
 :root {
   --fontPrincipal: "Revalia", cursive, sans-serif;
   --header-backgroundImgCard: #3c73b3;
+  --backgroundFooter: #c4c4c4;
   --backgroundPrincipal: #383a39;
   --backgroundForm: #d15b56;
   --backgroundCard-navHover: #565757;
@@ -318,6 +319,10 @@ main .containerImgBarbeiro img {
   max-width: 18rem;
 }
 
+main .carousel {
+  width: 40vw;
+}
+
 @media (max-width: 1578px) {
   .containerImgBarbeiro img {
     width: 15rem;
@@ -377,7 +382,7 @@ aside .containerAside form {
   display: grid;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-  width: 30rem;
+  justify-items: center;
   height: 30rem;
 }
 
@@ -388,6 +393,7 @@ aside .containerAside form input {
   height: 3rem;
   text-align: center;
   font-size: 1rem;
+  width: 25vw;
 }
 
 aside .containerAside form input::-webkit-input-placeholder {
@@ -416,6 +422,9 @@ aside .containerAside form textarea {
   background-color: #e29c99;
   height: 7rem;
   text-align: center;
+  font-size: 1rem;
+  border: none;
+  width: 25vw;
 }
 
 aside .containerAside form textarea::-webkit-input-placeholder {
@@ -436,5 +445,69 @@ aside .containerAside form textarea::-ms-input-placeholder {
 aside .containerAside form textarea::placeholder {
   opacity: 1;
   color: var(--backgroundPrincipal);
+}
+
+aside .containerAside form button {
+  width: 15vw;
+  height: 3rem;
+  font-family: var(--fontPrincipal);
+  font-size: 1.5rem;
+  background-color: #b6d2e7;
+  border: none;
+  border-radius: var(--bordaRadius);
+  cursor: pointer;
+  color: var(--backgroundCard-navHover);
+}
+
+aside .containerAside form button:hover {
+  background-color: var(--fontCard);
+  color: var(--backgroundPrincipal);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--backgroundFooter);
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer ul {
+  width: 90rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul li img {
+  padding-right: 0.5rem;
+}
+
+footer ul li .bolinha {
+  background-color: var(--backgroundForm);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

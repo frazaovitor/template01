@@ -133,6 +133,7 @@ a {
 :root {
   --fontPrincipal: "Revalia", cursive, sans-serif;
   --header-backgroundImgCard: #3c73b3;
+  --backgroundFooter: #c4c4c4;
   --backgroundPrincipal: #383a39;
   --backgroundForm: #d15b56;
   --backgroundCard-navHover: #565757;
@@ -274,6 +275,10 @@ main {
       max-width: 18rem;
     }
   }
+
+  .carousel {
+    width: 40vw;
+  }
 }
 
 // IMAGENS RESPONSIVAS
@@ -330,7 +335,8 @@ aside {
     form {
       display: grid;
       align-content: space-around;
-      width: 30rem;
+      justify-items: center;
+
       height: 30rem;
 
       input {
@@ -340,6 +346,7 @@ aside {
         height: 3rem;
         text-align: center;
         font-size: 1rem;
+        width: 25vw;
 
         &::placeholder {
           opacity: 1;
@@ -353,11 +360,63 @@ aside {
         background-color: #e29c99;
         height: 7rem;
         text-align: center;
+        font-size: 1rem;
+        border: none;
+        width: 25vw;
 
         &::placeholder {
           opacity: 1;
           color: var(--backgroundPrincipal);
         }
+      }
+
+      button {
+        width: 15vw;
+        height: 3rem;
+        font-family: var(--fontPrincipal);
+        font-size: 1.5rem;
+        background-color: #b6d2e7;
+        border: none;
+        border-radius: var(--bordaRadius);
+        cursor: pointer;
+        color: var(--backgroundCard-navHover);
+
+        &:hover {
+          background-color: var(--fontCard);
+          color: var(--backgroundPrincipal);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: var(--backgroundFooter);
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    width: 90rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        padding-right: 0.5rem;
+      }
+
+      .bolinha {
+        background-color: var(--backgroundForm);
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
       }
     }
   }
