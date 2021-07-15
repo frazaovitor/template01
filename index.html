@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
 
+    <!-- FONT AEWSOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <!-- SLICK CAROUSEL -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
         crossorigin="anonymous" />
@@ -19,65 +24,107 @@
 
 <body>
     <header>
-        <h1> <span>BARBER</span> SHOP</h1>
+        <i id="menuHamburguer" class="fas fa-bars"></i>
+        <nav class="menuHide" id="navHeader">
+            <div class="fecharMenu" id="fecharMenu">X</div>
+            <ul>
+                <li><a id="fecharMenu" href="#card">Início</a></li>
+                <li><a id="fecharMenu" href="#barbeiros">Barbeiros</a></li>
+                <li><a id="fecharMenu" href="#card">barbeiros</a></li>
+            </ul>
+        </nav>
+        <h1>BARBER SHOP</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">cortes</a></li>
-            <li><a href="#">preços</a></li>
-            <li><img src="img/tesura.webp" alt="tesoura"></li>
-            <li><a href="#">horários</a></li>
-            <li><a href="#">barbeiros</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <div class="containerCard">
-                <div class="card">
-                    <img src="img/maquina.webp" alt="">
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minus praesentium ex iste fugit!</p>
+
+        <img class="banner" src="img/carousel01.webp" alt="imagem carousel">
+
+        <section class="cards">
+            <div class="card" id="card">
+                <img src="img/maquina.webp" alt="">
+                <hr>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+            </div>
+
+            <div class="card">
+                <img src="img/navalha.webp" alt="">
+                <hr>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+            </div>
+
+            <div class="card">
+                <img src="img/pente.webp" alt="">
+                <hr>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+            </div>
+        </section>
+
+
+        <section class="quemSomos" id="quemSomos">
+
+            <div class="barbearia">
+                <h2>BARBEARIA</h2>
+                <div class="carousel">
+                    <img src="img/carousel01.webp" alt="imagem carousel">
+                    <img src="img/carousel01.webp" alt="imagem carousel">
+                    <img src="img/carousel01.webp" alt="imagem carousel">
+                    <img src="img/carousel01.webp" alt="imagem carousel">
                 </div>
-                <div class="card">
-                    <img src="img/pente.webp" alt="">
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minus praesentium ex iste fugit!</p>
-                </div>
-                <div class="card">
-                    <img src="img/navalha.webp" alt="">
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minus praesentium ex iste fugit!</p>
+                <div class="contatoBarbearia">
+                    <a href="http://"><img src="img/facebook.webp" alt=""></a>
+                    <a href="http://"><img src="img/instagram.webp" alt=""></a>
                 </div>
             </div>
 
-            <div class="containerImgBarbeiro">
+            <h2>BARBEIROS</h2>
+            <div class="barbeiro">
+                <h2>Júlio</h2>
                 <img src="img/barbeiro01.webp" alt="backgroundCard-navHover">
-                <img src="img/barbeiro02.webp" alt="backgroundCard-navHover">
-                <img src="img/barbeiro03.webp" alt="backgroundCard-navHover">
 
-
+                <div class="contatoBarbeiro">
+                    <a href="http://"><img src="img/facebook.webp" alt=""></a>
+                    <a href="http://"><img src="img/instagram.webp" alt=""></a>
+                </div>
             </div>
 
-            <div class="carousel">
-                <div><img src="img/carousel01.webp" alt="imagem carousel"></div>
-                <div><img src="img/carousel01.webp" alt="imagem carousel"></div>
-                <div><img src="img/carousel01.webp" alt="imagem carousel"></div>
-                <div><img src="img/carousel01.webp" alt="imagem carousel"></div>
+            <div class="barbeiro">
+                <h2>Thiago</h2>
+                <img src="img/barbeiro01.webp" alt="backgroundCard-navHover">
+
+                <div class="contatoBarbeiro">
+                    <a href="http://"><img src="img/facebook.webp" alt=""></a>
+                    <a href="http://"><img src="img/instagram.webp" alt=""></a>
+                </div>
             </div>
+
+            <div class="barbeiro">
+                <h2>Guilherme</h2>
+                <img src="img/barbeiro01.webp" alt="backgroundCard-navHover">
+
+                <div class="contatoBarbeiro">
+                    <a href="http://"><img src="img/facebook.webp" alt=""></a>
+                    <a href="http://"><img src="img/instagram.webp" alt=""></a>
+                </div>
+            </div>
+
+
 
         </section>
-        <aside>
-            <div class="containerAside">
 
-                <div class="headerForm">
-                    <h2><span>B</span>ARBER</h2>
-                    <small>Lorem ipsum dolor sit amet consectetur</small>
-                </div>
+    </main>
 
-                <form action="https://api.staticforms.xyz/submit" method="post">
-                    <!-- <input type="hidden" name="accessKey" value="074c4c89-d11d-4f0d-b6e5-5b9cdface983"> -->
+
+
+    <!-- <div class="containerImgBarbeiro">
+        
+    </div> -->
+
+    <!--  -->
+
+
+    <!-- <form action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="hidden" name="accessKey" value="074c4c89-d11d-4f0d-b6e5-5b9cdface983">
                     <input type="text" name="name" placeholder="nome">
                     <input type="text" name="email" placeholder="e-mail" />
                     <input type="tel" name="phone" placeholder="telefone 99 99999999"
@@ -85,33 +132,30 @@
                     <textarea name="message" placeholder="mensagem"></textarea>
                     <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
                     <button type="submit" value="Submit">ENVIAR</button>
-                </form>
-            </div>
-        </aside>
-    </main>
+                </form> -->
 
     <footer>
         <ul>
-            <li><img src="img/local.webp" alt="">
+            <li><img src="img/local.webp" alt="local">
                 <p>Rua abcdet, 56 Rio de janeiro, RJ</p>
             </li>
             <li>
                 <div class="bolinha"></div>
             </li>
             </li>
-            <li><img src="img/whatsapp.webp" alt="">
+            <li><img src="img/whatsapp.webp" alt="whatsapp">
                 <p>21 9 9999-9999</p>
             </li>
             <li>
                 <div class="bolinha"></div>
             </li>
-            <li><img src="img/instagram.webp" alt="">
+            <li><img src="img/instagram.webp" alt="instagram">
                 <p>barberShop</p>
             </li>
             <li>
                 <div class="bolinha"></div>
             </li>
-            <li><img src="img/facebook.webp" alt="">
+            <li><img src="img/facebook.webp" alt="facebook">
                 <p>barberShop</p>
             </li>
         </ul>
@@ -126,6 +170,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous"></script>
+
+
     <script type="text/javascript" src="script/script.js"></script>
 </body>
 

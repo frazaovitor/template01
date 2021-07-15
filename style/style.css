@@ -131,37 +131,33 @@ table {
 }
 
 a {
-  color: #fff;
+  color: var(--pretoClaro);
   text-decoration: none;
 }
 
 :root {
   --fontPrincipal: "Revalia", cursive, sans-serif;
-  --header-backgroundImgCard: #3c73b3;
-  --backgroundFooter: #c4c4c4;
-  --backgroundPrincipal: #383a39;
-  --backgroundForm: #d15b56;
-  --backgroundCard-navHover: #565757;
-  --fontNav: #d15b56;
-  --fontCard: #9ecde9;
   --bordaRadius: 0.75rem;
+  --azulEscuro: #3c73b3;
+  --azulClaro: #9ecde9;
+  --branco: #c4c4c4;
+  --pretoEscuro: #383a39;
+  --pretoClaro: #565757;
+  --vermelhoEscuro: #d15b56;
+  --vermelhoClaro: #d88d8a;
 }
 
 body {
-  background-color: var(--backgroundPrincipal);
+  background-color: var(--pretoEscuro);
   font-family: var(--fontPrincipal);
-}
-
-h1 {
-  font-size: 2.3rem;
-  color: var(--header-backgroundImgCard);
+  line-height: 1.6rem;
 }
 
 header {
   background-image: url(../img/header.webp);
-  background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 100%;
+  background-position: center;
+  background-size: 100% 100%;
   height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,340 +170,144 @@ header {
           align-items: center;
 }
 
-header span {
-  background-color: #d88d8a;
+header h1 {
+  font-size: 1.3rem;
+  color: var(--azulEscuro);
+  background-color: var(--vermelhoClaro);
   padding: 0.2rem 0.5rem;
   border-radius: var(--bordaRadius);
 }
 
-nav {
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 7rem;
+i {
+  background-color: var(--azulEscuro);
+  color: var(--pretoEscuro);
+  -ms-grid-column-align: left;
+      justify-self: left;
+  position: absolute;
+  left: 0.2rem;
+  padding: 0.57rem 0.7rem;
+  border-radius: var(--bordaRadius);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: fixed;
+  cursor: pointer;
 }
 
-nav ul {
-  width: 58rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: var(--fontNav);
+#navHeader {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: 70vh;
+  background-color: var(--branco);
+  color: var(--pretoClaro);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-nav ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.2rem 0.5rem 0.4rem 0.3rem;
-  border-radius: 0.5rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+#navHeader .fecharMenu {
+  padding: 1rem 1rem;
+  cursor: pointer;
+  width: 1rem;
+  background-color: var(--vermelhoEscuro);
 }
 
-nav ul li:first-child {
-  background-color: var(--backgroundCard-navHover);
+#navHeader li {
+  text-align: center;
+  padding: 1rem 0;
 }
 
-nav ul li:nth-child(3):hover {
-  background: none;
-  cursor: default;
+#navHeader li:hover {
+  background-color: var(--vermelhoEscuro);
 }
 
-nav ul li:hover {
-  background-color: var(--backgroundCard-navHover);
+#navHeader li a {
+  padding: 1rem 6.8rem;
 }
 
-nav ul li a {
-  color: var(--fontNav);
+#navHeader li a:hover {
+  color: var(--pretoEscuro);
+  background-color: var(--vermelhoEscuro);
+}
+
+.menuHide {
+  margin-left: -55rem;
 }
 
 main {
-  width: 100%;
-  height: 50rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main section {
-  width: 60vw;
-  height: 50rem;
+main .banner {
+  width: 100vw;
+}
+
+main .cards {
+  padding: 4rem 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+main .cards .card {
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-}
-
-main section .containerCard {
-  width: 50vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main section .containerCard .card {
-  background: var(--backgroundCard-navHover);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--azulClaro);
   width: 15rem;
-  height: 20rem;
-  border-radius: var(--bordaRadius);
-  display: -ms-grid;
-  display: grid;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  justify-items: center;
-  text-align: center;
-  color: var(--fontCard);
-}
-
-main section .containerCard .card img {
-  background-color: var(--header-backgroundImgCard);
-  padding: 0.9rem;
-  border-radius: 10rem;
-}
-
-main section .containerCard .card hr {
-  width: 80%;
-  border-color: var(--fontCard);
-}
-
-main section .containerCard .card p {
-  width: 80%;
-}
-
-main .containerImgBarbeiro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 47vw;
-  height: 13rem;
-}
-
-main .containerImgBarbeiro img {
-  max-width: 18rem;
-}
-
-main .carousel {
-  width: 40vw;
-}
-
-@media (max-width: 1578px) {
-  .containerImgBarbeiro img {
-    width: 15rem;
-  }
-}
-
-@media (max-width: 1323px) {
-  .containerImgBarbeiro img {
-    width: 13rem;
-  }
-}
-
-aside {
-  background: var(--backgroundForm);
-  color: var(--backgroundPrincipal);
-  width: 40vw;
-  height: 50rem;
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-}
-
-aside .containerAside {
-  width: 35vw;
-  display: -ms-grid;
-  display: grid;
-  height: 40rem;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  justify-items: center;
-}
-
-aside .containerAside .headerForm {
-  display: -ms-grid;
-  display: grid;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  height: 7rem;
-  text-align: center;
-}
-
-aside .containerAside .headerForm h2 {
-  font-size: 3rem;
-}
-
-aside .containerAside .headerForm span {
-  background-color: var(--backgroundPrincipal);
-  color: var(--fontNav);
-  padding: 0 0.6rem 0.3rem;
+  height: 15rem;
+  padding: 2rem 0;
   border-radius: var(--bordaRadius);
 }
 
-aside .containerAside form {
+main .cards .card img {
+  background-color: var(--azulEscuro);
+  background-position: center;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+main .cards .card hr {
+  width: 12rem;
+  margin: 2rem 0;
+  border-color: var(--pretoClaro);
+}
+
+main .quemSomos {
+  width: 100vw;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  background: var(--pretoClaro);
+  text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  justify-items: center;
-  height: 30rem;
-}
-
-aside .containerAside form input {
-  font-family: var(--fontPrincipal);
-  background-color: #e29c99;
-  border: none;
-  height: 3rem;
-  text-align: center;
-  font-size: 1rem;
-  width: 25vw;
-}
-
-aside .containerAside form input::-webkit-input-placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form input:-ms-input-placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form input::-ms-input-placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form input::placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form textarea {
-  resize: none;
-  font-family: var(--fontPrincipal);
-  background-color: #e29c99;
-  height: 7rem;
-  text-align: center;
-  font-size: 1rem;
-  border: none;
-  width: 25vw;
-}
-
-aside .containerAside form textarea::-webkit-input-placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form textarea:-ms-input-placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form textarea::-ms-input-placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form textarea::placeholder {
-  opacity: 1;
-  color: var(--backgroundPrincipal);
-}
-
-aside .containerAside form button {
-  width: 15vw;
-  height: 3rem;
-  font-family: var(--fontPrincipal);
-  font-size: 1.5rem;
-  background-color: #b6d2e7;
-  border: none;
-  border-radius: var(--bordaRadius);
-  cursor: pointer;
-  color: var(--backgroundCard-navHover);
-}
-
-aside .containerAside form button:hover {
-  background-color: var(--fontCard);
-  color: var(--backgroundPrincipal);
-}
-
-footer {
-  width: 100%;
-  background-color: var(--backgroundFooter);
-  height: 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 2rem;
 }
 
-footer ul {
-  width: 90rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+main .quemSomos .barbearia .carousel {
+  max-width: 90vw;
 }
 
-footer ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+main .quemSomos .barbearia .contatoBarbearia {
+  padding-top: 1rem;
 }
 
-footer ul li img {
-  padding-right: 0.5rem;
-}
-
-footer ul li .bolinha {
-  background-color: var(--backgroundForm);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 1rem;
+main .quemSomos .barbearia .barbeiro {
+  padding: 1rem 0;
 }
 /*# sourceMappingURL=style.css.map */
