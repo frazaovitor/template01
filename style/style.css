@@ -285,29 +285,27 @@ main .cards .card hr {
   border-color: var(--pretoClaro);
 }
 
-main .quemSomos {
-  width: 100vw;
-  margin: 2rem 0;
+main .barbeiros {
   padding: 2rem 0;
-  background: var(--pretoClaro);
-  text-align: center;
+  margin: 2rem 0;
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 2rem;
+  justify-items: center;
+  height: 100%;
+  background-color: var(--pretoClaro);
 }
 
-main .quemSomos .barbearia .carousel {
-  max-width: 90vw;
+main .barbeiros h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-main .quemSomos .barbearia .contatoBarbearia {
-  padding-top: 1rem;
+main .barbeiros .barbeiro {
+  padding: 1rem 0.5rem;
+  margin: 1rem 0;
 }
 
-main .quemSomos .barbearia .barbeiro {
-  padding: 1rem 0;
+main .barbeiros .barbeiro img {
+  margin: .5rem 0;
 }
 /*# sourceMappingURL=style.css.map */

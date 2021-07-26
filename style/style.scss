@@ -264,29 +264,26 @@ main {
       }
     }
   }
-
-  .quemSomos {
-    width: 100vw;
-    margin: 2rem 0;
+  .barbeiros {
     padding: 2rem 0;
-    background: var(--pretoClaro);
-    text-align: center;
-
+    margin: 2rem 0;
     display: grid;
-    justify-content: center;
-    gap: 2rem;
+    justify-items: center;
+    height: 100%;
 
-    .barbearia {
-      .carousel {
-        max-width: 90vw;
-      }
+    background-color: var(--pretoClaro);
 
-      .contatoBarbearia {
-        padding-top: 1rem;
-      }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-      .barbeiro {
-        padding: 1rem 0;
+    .barbeiro {
+      padding: 1rem 0.5rem;
+      margin: 1rem 0;
+
+      img {
+        margin: .5rem 0;
       }
     }
   }
