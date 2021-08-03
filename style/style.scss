@@ -147,6 +147,33 @@ body {
   background-color: var(--pretoEscuro);
   font-family: var(--fontPrincipal);
   line-height: 1.6rem;
+  color: var(--pretoEscuro);
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: var(--azulEscuro);
+  background-color: var(--vermelhoClaro);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--bordaRadius);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.destaque {
+  color: var(--vermelhoEscuro);
+}
+
+.voltarTopo{
+  position: fixed;
+  right: 45%;
+  bottom: 2rem;
+  padding: .75rem;
+  border-radius: var(--bordaRadius);
+  background-color: var(--vermelhoEscuro);
 }
 
 header {
@@ -159,17 +186,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  h1 {
-    font-size: 1.3rem;
-    color: var(--azulEscuro);
-    background-color: var(--vermelhoClaro);
-    padding: 0.2rem 0.5rem;
-    border-radius: var(--bordaRadius);
-  }
 }
 
-i {
+.hamburguer {
   background-color: var(--azulEscuro);
   color: var(--pretoEscuro);
   justify-self: left;
@@ -199,20 +218,24 @@ i {
     background-color: var(--vermelhoEscuro);
   }
 
-  li {
-    text-align: center;
-    padding: 1rem 0;
-
-    &:hover {
-      background-color: var(--vermelhoEscuro);
-    }
-
-    a {
-      padding: 1rem 6.8rem;
-
+  ul {
+    display: grid;
+    justify-content: center;
+    li {
+      width: 100%;
       &:hover {
-        color: var(--pretoEscuro);
         background-color: var(--vermelhoEscuro);
+      }
+
+      a {
+        padding: 1rem 6.8rem;
+        width: 90vw;
+        display: flex;
+
+        &:hover {
+          color: var(--pretoEscuro);
+          background-color: var(--vermelhoEscuro);
+        }
       }
     }
   }
@@ -227,15 +250,19 @@ main {
   display: grid;
   justify-content: center;
 
+  hr {
+    width: 15rem;
+    border-color: var(--pretoEscuro);
+  }
+
   .banner {
     width: 100vw;
   }
 
   .cards {
-    padding: 4rem 0;
+    padding: 3rem 0;
     display: grid;
     justify-content: center;
-    height: 100%;
 
     .card {
       display: grid;
@@ -264,27 +291,121 @@ main {
       }
     }
   }
-  .barbeiros {
-    padding: 2rem 0;
-    margin: 2rem 0;
-    display: grid;
-    justify-items: center;
-    height: 100%;
 
+  .background {
     background-color: var(--pretoClaro);
 
-    h2 {
-      font-size: 1.5rem;
-      font-weight: bold;
+    .quemSomos {
+      display: grid;
+      justify-items: center;
+      padding: 2rem 0;
+
+      h2,
+      img,
+      .barbeariaHistoria,
+      .barbeariaContato {
+        padding: 1rem 0;
+      }
+
+      .barbeariaHistoria {
+        width: 90vw;
+      }
     }
 
-    .barbeiro {
-      padding: 1rem 0.5rem;
-      margin: 1rem 0;
+    .barbeiros {
+      display: grid;
+      justify-items: center;
+      padding: 2rem 0;
 
-      img {
-        margin: .5rem 0;
+      h2,
+      .barbeiro {
+        padding: 2rem 0;
       }
+
+      .barbeiro {
+        h3 {
+          padding: 1rem 0;
+          color: var(--azulClaro);
+          font-style: oblique;
+          text-decoration: overline;
+        }
+        .barbeiroContato {
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .contato {
+    background-color: var(--vermelhoEscuro);
+    padding: 3rem 0;
+    display: grid;
+    justify-items: center;
+
+    h2 {
+      padding-bottom: 2rem;
+    }
+
+    form {
+      display: grid;
+      width: 15rem;
+
+      input,
+      textarea {
+        font-family: var(--fontPrincipal);
+        text-align: center;
+        height: 2rem;
+        border: none;
+        border-radius: var(--bordaRadius);
+        margin: 0.5rem;
+      }
+
+      textarea {
+        height: 7rem;
+        resize: none;
+      }
+      button {
+        height: 3rem;
+        border: none;
+        border-radius: var(--bordaRadius);
+        margin-top: 2rem;
+
+        background-color: var(--azulClaro);
+        color: var(--pretoClaro);
+        font-family: var(--fontPrincipal);
+        font-size: 1.5rem;
+
+        transition: 0.3s;
+
+        &:hover {
+          background-color: var(--azulEscuro);
+          color: var(--pretoEscuro);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: var(--azulEscuro);
+  padding: 2rem 0;
+
+  ul {
+    width: 90vw;
+  }
+
+  ul,
+  li {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+
+    .bolinha {
+      width: 10px;
+      height: 10px;
+      margin: 2rem 0;
+      border-radius: var(--bordaRadius);
+      background-color: var(--vermelhoEscuro);
     }
   }
 }
